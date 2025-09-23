@@ -1,11 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const name = "Hija Happy";
+const tagline = "CSE Student • Developer • Curious Explorer";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{name} | Portfolio</title>
+  </head>
+  <body style="font-family: sans-serif; padding: 2rem; line-height: 1.6;">
+    <h1>{name} 🚀</h1>
+    <h2>{tagline}</h2>
+    
+    <p>Welcome to my corner of the web. I build apps, experiment with tech, and enjoy learning new things.</p>
+
+    <nav style="margin-top: 1rem;">
+      <a href="/projects" style="margin-right: 1rem;">Projects</a>
+      <a href="/about">About</a>
+    </nav>
+  </body>
+</html>
