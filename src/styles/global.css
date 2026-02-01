@@ -1,32 +1,40 @@
 /* Enhanced global styles for cool blue 3D portrait theme */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
 
 /* Cool Blue Theme Variables - Matching 3D Portrait */
 :root {
-	/* Background Colors (from image) */
-	--bg-primary: #0a0d12;
-	--bg-secondary: #0f1419;
-	--bg-card: #141920;
-	--bg-card-hover: #1a222b;
+	/* Background Colors - Consistent with hero black theme */
+	--bg-primary: #000000;
+	--bg-secondary: #0a0a0a;
+	--bg-card: #111111;
+	--bg-card-hover: #1a1a1a;
 	
-	/* Text Colors */
-	--text-primary: #f8fafc;
-	--text-secondary: #cbd5e1;
-	--text-muted: #94a3b8;
+	/* Text Colors - Enhanced with blues */
+	--text-primary: #e1f2ff;
+	--text-secondary: #94c5f7;
+	--text-muted: #7bb3f0;
 	
-	/* Cool Blue Accents (from image lighting) */
+	/* Cool Blue Accents */
 	--accent-primary: #5ba3f5;
 	--accent-soft: #7bb3f0;
 	--accent-glow: #4a9eff33;
 	--accent-dim: #4a9eff1a;
 	
-	/* Border Colors */
-	--border-subtle: #1e2832;
-	--border-accent: #2a3441;
+	/* Border Colors - Enhanced with subtle blue tint */
+	--border-subtle: #1a2332;
+	--border-accent: #2a3951;
 	
 	/* Gradients for depth */
-	--gradient-hero: linear-gradient(135deg, var(--bg-primary) 0%, #0c1015 50%, var(--bg-secondary) 100%);
+	--gradient-hero: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #111111 100%);
 	--gradient-section: linear-gradient(to bottom, transparent 0%, var(--accent-dim) 50%, transparent 100%);
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Rowdies', cursive;
+	font-weight: 700;
 }
 
 /* Enhanced Typography */

@@ -25,8 +25,10 @@
 </section>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap');
+
 	.hero {
-		min-height: 100vh;
+		min-height: 80vh;
 		background: #000000;
 		display: flex;
 		align-items: center;
@@ -47,7 +49,7 @@
 	.hero-container {
 		max-width: 1400px;
 		margin: 0 auto;
-		padding: 2rem;
+		padding: 1rem 2rem;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 4rem;
@@ -58,6 +60,7 @@
 
 	.hero-content {
 		padding-right: 2rem;
+		padding-left: 6rem;
 		position: relative;
 	}
 
@@ -82,9 +85,10 @@
 	}
 
 	.hero-name {
-		font-size: 4.5rem;
-		font-weight: 700;
-		margin-bottom: 1rem;
+		font-family: 'Playwrite NZ', cursive;
+		font-size: 3.5rem;
+		font-weight: 400;
+		margin-bottom: 0.5rem;
 		color: var(--text-primary);
 		letter-spacing: -0.02em;
 		line-height: 1.1;
@@ -104,18 +108,21 @@
 	}
 
 	.hero-title {
-		font-size: 1.8rem;
-		font-weight: 500;
+		font-family: 'Playwrite NZ', cursive;
+		font-size: 1.5rem;
+		font-weight: 300;
 		color: var(--accent-soft);
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
 		animation: fadeInUp 1s ease-out 0.2s both;
 	}
 
 	.hero-intro {
-		font-size: 1.2rem;
+		font-family: 'Playwrite NZ', cursive;
+		font-size: 1.1rem;
+		font-weight: 300;
 		color: var(--text-secondary);
 		line-height: 1.7;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 		animation: fadeInUp 1s ease-out 0.4s both;
 	}
 
@@ -128,14 +135,15 @@
 
 	.hero-image {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-center;
 		align-items: center;
 		position: relative;
+		padding-left: 6rem;
 	}
 
 	.image-container {
 		position: relative;
-		max-width: 500px;
+		max-width: 400px;
 		width: 100%;
 	}
 
