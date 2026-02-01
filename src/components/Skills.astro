@@ -1,0 +1,148 @@
+---
+const skills = {
+	frontend: [
+		"HTML5",
+		"CSS3",
+		"JavaScript",
+		"TypeScript",
+		"React",
+		"Angular",
+		"Tailwind CSS",
+		"Bootstrap",
+		"Sass"
+	],
+	backend: [
+		"Node.js",
+		"Express.js",
+		".NET",
+		"MongoDB",
+		"MySQL",
+		"REST APIs"
+	],
+	tools: [
+		"Git & GitHub",
+		"VS Code",
+		"Postman",
+		"Flutter",
+		"React Native"
+	]
+};
+---
+
+<section id="skills" class="skills">
+	<div class="container">
+		<h2 class="section-title">Skills</h2>
+		<p class="section-subtitle">Technologies I work with and continue to learn</p>
+		
+		<div class="skills-grid">
+			<div class="skill-category">
+				<h3 class="category-title">Frontend</h3>
+				<ul class="skills-list">
+					{skills.frontend.map((skill) => (
+						<li class="skill-item">{skill}</li>
+					))}
+				</ul>
+			</div>
+			
+			<div class="skill-category">
+				<h3 class="category-title">Backend & Tools</h3>
+				<ul class="skills-list">
+					{skills.backend.map((skill) => (
+						<li class="skill-item">{skill}</li>
+					))}
+				</ul>
+			</div>
+			
+			<div class="skill-category">
+				<h3 class="category-title">Development Tools</h3>
+				<ul class="skills-list">
+					{skills.tools.map((skill) => (
+						<li class="skill-item">{skill}</li>
+					))}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.skills {
+		padding: 5rem 2rem;
+		background: #0a0a0a;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 1rem;
+		color: #e5e5e5;
+	}
+
+	.section-subtitle {
+		text-align: center;
+		color: #888;
+		margin-bottom: 3rem;
+		font-size: 1.1rem;
+	}
+
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.skill-category {
+		background: #1a1a1a;
+		border: 1px solid #2a2a2a;
+		border-radius: 8px;
+		padding: 2rem;
+	}
+
+	.category-title {
+		font-size: 1.3rem;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+		color: #e5e5e5;
+		border-bottom: 2px solid #2a2a2a;
+		padding-bottom: 0.5rem;
+	}
+
+	.skills-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.skill-item {
+		color: #a3a3a3;
+		margin-bottom: 0.8rem;
+		padding: 0.5rem 0;
+		border-bottom: 1px solid #1a1a1a;
+		font-weight: 500;
+	}
+
+	.skill-item:last-child {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 768px) {
+		.skills {
+			padding: 3rem 1rem;
+		}
+
+		.skills-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+	}
+</style>

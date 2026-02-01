@@ -1,0 +1,106 @@
+---
+const hobbies = [
+	{
+		title: "Art",
+		description: "I sketch and explore digital art in my free time. It helps me think about composition and visual design."
+	},
+	{
+		title: "Photography", 
+		description: "Taking photos of everyday moments and landscapes. I enjoy experimenting with lighting and perspectives."
+	},
+	{
+		title: "Development",
+		description: "Building small side projects and experimenting with new web technologies. Always learning something new."
+	}
+];
+---
+
+<section id="hobbies" class="hobbies">
+	<div class="container">
+		<h2 class="section-title">Hobbies</h2>
+		<p class="section-subtitle">Things I enjoy outside of work</p>
+		
+		<div class="hobbies-grid">
+			{hobbies.map((hobby) => (
+				<div class="hobby-card">
+					<h3 class="hobby-title">{hobby.title}</h3>
+					<p class="hobby-description">{hobby.description}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.hobbies {
+		padding: 5rem 2rem;
+		background: #0a0a0a;
+	}
+
+	.container {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 1rem;
+		color: #e5e5e5;
+	}
+
+	.section-subtitle {
+		text-align: center;
+		color: #888;
+		margin-bottom: 3rem;
+		font-size: 1.1rem;
+	}
+
+	.hobbies-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.hobby-card {
+		background: #1a1a1a;
+		border: 1px solid #2a2a2a;
+		border-radius: 8px;
+		padding: 2rem;
+		text-align: center;
+		transition: all 0.2s ease;
+	}
+
+	.hobby-card:hover {
+		border-color: #404040;
+		transform: translateY(-2px);
+	}
+
+	.hobby-title {
+		font-size: 1.3rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+		color: #e5e5e5;
+	}
+
+	.hobby-description {
+		color: #a3a3a3;
+		line-height: 1.6;
+		font-size: 0.95rem;
+	}
+
+	@media (max-width: 768px) {
+		.hobbies {
+			padding: 3rem 1rem;
+		}
+
+		.hobbies-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+	}
+</style>

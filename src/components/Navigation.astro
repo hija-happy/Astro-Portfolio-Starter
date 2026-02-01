@@ -1,0 +1,72 @@
+---
+---
+
+<nav class="nav">
+	<div class="nav-content">
+		<a href="/" class="nav-home">Home</a>
+		<div class="nav-links">
+			<a href="#projects">Projects</a>
+			<a href="#skills">Skills</a>
+			<a href="#about">About</a>
+			<a href="#hobbies">Hobbies</a>
+			<a href="#contact">Contact</a>
+		</div>
+	</div>
+</nav>
+
+<style>
+	.nav {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background: rgba(10, 10, 10, 0.95);
+		backdrop-filter: blur(10px);
+		border-bottom: 1px solid #1a1a1a;
+		z-index: 1000;
+	}
+
+	.nav-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.nav-home {
+		font-weight: 600;
+		font-size: 1.1rem;
+		color: #e5e5e5;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.nav-links a {
+		color: #888;
+		font-size: 0.9rem;
+		font-weight: 500;
+		transition: color 0.2s ease;
+	}
+
+	.nav-links a:hover {
+		color: #e5e5e5;
+	}
+
+	@media (max-width: 768px) {
+		.nav-content {
+			padding: 1rem 1rem;
+		}
+
+		.nav-links {
+			gap: 1rem;
+		}
+
+		.nav-links a {
+			font-size: 0.8rem;
+		}
+	}
+</style>

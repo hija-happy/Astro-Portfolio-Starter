@@ -1,42 +1,21 @@
 ---
-const projects = [
-  {
-    title: "🚚 Flutter Fleet Management",
-    desc: "A mobile app built with Flutter and Firebase to manage fleets, track vehicles, and handle logistics in real time."
-  },
-  {
-    title: "🎬 Netflix Clone",
-    desc: "A MERN stack (MongoDB, Express, React, Node.js) application replicating core features of Netflix, including authentication and movie streaming UI."
-  },
-  {
-    title: "🖼 Web3 NFT Management",
-    desc: "A decentralized marketplace for NFTs built using Solidity, Hardhat, and React with Tailwind CSS. Includes smart contract integrations."
-  },
-  {
-    title: "📚 Book Management System",
-    desc: "A full-stack application built with Angular and .NET Web API for managing books, complete with CRUD operations and database integration."
-  }
-];
+import Layout from '../layouts/Layout.astro';
+
+// Simple redirect to main page projects section
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Projects</title>
-  </head>
-  <body style="font-family: sans-serif; padding: 2rem; line-height: 1.6;">
-    <h1>Projects</h1>
-    <p>Here are some projects I’ve worked on, across mobile, web, and blockchain development:</p>
-
-    <ul>
-      {projects.map((p) => (
-        <li style="margin-bottom: 1rem;">
-          <strong>{p.title}</strong><br />
-          {p.desc}
-        </li>
-      ))}
-    </ul>
-
-    <a href="/">← Back Home</a>
-  </body>
-</html>
+<Layout title="Projects - Alex Johnson">
+	<script>
+		// Redirect to main page projects section
+		window.location.href = '/#projects';
+	</script>
+	
+	<main style="display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 2rem;">
+		<div>
+			<h1 style="margin-bottom: 1rem;">Redirecting to Projects section...</h1>
+			<p style="color: #888;">
+				<a href="/#projects" style="color: #e5e5e5;">Click here if not redirected automatically</a>
+			</p>
+		</div>
+	</main>
+</Layout>

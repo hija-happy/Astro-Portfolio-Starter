@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Simple redirect to main page skills section
+---
+
+<Layout title="Experience - Alex Johnson">
+	<script>
+		// Redirect to main page skills section
+		window.location.href = '/#skills';
+	</script>
+	
+	<main style="display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 2rem;">
+		<div>
+			<h1 style="margin-bottom: 1rem;">Redirecting to Skills section...</h1>
+			<p style="color: #888;">
+				<a href="/#skills" style="color: #e5e5e5;">Click here if not redirected automatically</a>
+			</p>
+		</div>
+	</main>
+</Layout>

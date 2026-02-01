@@ -1,22 +1,28 @@
 ---
-const name = "Hija Happy";
-const tagline = "CSE Student • Developer • Curious Explorer";
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+import Hero from '../components/Hero.astro';
+import Hobbies from '../components/Hobbies.astro';
+import Navigation from '../components/Navigation.astro';
+import Projects from '../components/Projects.astro';
+import Skills from '../components/Skills.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>{name} | Portfolio</title>
-  </head>
-  <body style="font-family: sans-serif; padding: 2rem; line-height: 1.6;">
-    <h1>{name} 🚀</h1>
-    <h2>{tagline}</h2>
-    
-    <p>Welcome to my corner of the web. I build apps, experiment with tech, and enjoy learning new things.</p>
+<Layout title="Hija Happy - Creative Developer & Visual Artist">
+	<Navigation />
+	<main>
+		<Hero />
+		<Projects />
+		<Skills />
+		<About />
+		<Hobbies />
+		<Contact />
+	</main>
+</Layout>
 
-    <nav style="margin-top: 1rem;">
-      <a href="/projects" style="margin-right: 1rem;">Projects</a>
-      <a href="/about">About</a>
-    </nav>
-  </body>
-</html>
+<style>
+	main {
+		padding-top: 80px; /* Account for fixed nav */
+	}
+</style>

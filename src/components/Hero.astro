@@ -1,0 +1,119 @@
+---
+---
+
+<section class="hero">
+	<div class="hero-content">
+		<h1 class="hero-name">Hija Happy</h1>
+		<h2 class="hero-title">Creative Developer & Visual Artist</h2>
+		<p class="hero-intro">A geek by day, artist at heart. I code, create, and capture moments — exploring the best of both worlds.</p>
+		<div class="hero-links">
+			<a href="#projects" class="cta-primary">View Projects</a>
+			<a href="#contact" class="cta-secondary">Get in Touch</a>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 2rem;
+		text-align: center;
+	}
+
+	.hero-content {
+		max-width: 800px;
+	}
+
+	.hero-name {
+		font-size: 3.5rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+		color: #e5e5e5;
+		letter-spacing: -0.02em;
+	}
+
+	.hero-title {
+		font-size: 1.8rem;
+		font-weight: 500;
+		color: #888;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-intro {
+		font-size: 1.2rem;
+		color: #a3a3a3;
+		margin-bottom: 2.5rem;
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.hero-links {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.cta-primary {
+		background: #e5e5e5;
+		color: #0a0a0a;
+		padding: 0.8rem 2rem;
+		border-radius: 6px;
+		font-weight: 600;
+		transition: all 0.2s ease;
+	}
+
+	.cta-primary:hover {
+		background: #d4d4d4;
+		color: #0a0a0a;
+		transform: translateY(-1px);
+	}
+
+	.cta-secondary {
+		border: 1px solid #404040;
+		color: #e5e5e5;
+		padding: 0.8rem 2rem;
+		border-radius: 6px;
+		font-weight: 600;
+		transition: all 0.2s ease;
+	}
+
+	.cta-secondary:hover {
+		background: #1a1a1a;
+		border-color: #606060;
+		transform: translateY(-1px);
+	}
+
+	@media (max-width: 768px) {
+		.hero {
+			padding: 0 1rem;
+		}
+
+		.hero-name {
+			font-size: 2.5rem;
+		}
+
+		.hero-title {
+			font-size: 1.4rem;
+		}
+
+		.hero-intro {
+			font-size: 1rem;
+		}
+
+		.hero-links {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.cta-primary,
+		.cta-secondary {
+			width: 100%;
+			max-width: 250px;
+		}
+	}
+</style>
