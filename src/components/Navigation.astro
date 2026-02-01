@@ -3,8 +3,16 @@
 
 <nav class="nav">
 	<div class="nav-content">
-		<a href="/" class="nav-home">Home</a>
-		<div class="nav-links">
+		<a href="/" class="nav-home">Hija Happy</a>
+		
+		<!-- Hamburger Menu Button -->
+		<button class="hamburger" id="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		
+		<div class="nav-links" id="navLinks">
 			<a href="#projects">Projects</a>
 			<a href="#skills">Skills</a>
 			<a href="#about">About</a>
@@ -13,6 +21,25 @@
 		</div>
 	</div>
 </nav>
+
+<script>
+	const hamburger = document.getElementById('hamburger');
+	const navLinks = document.getElementById('navLinks');
+
+	hamburger?.addEventListener('click', () => {
+		hamburger.classList.toggle('active');
+		navLinks?.classList.toggle('active');
+	});
+
+	// Close menu when clicking on a link
+	const links = navLinks?.querySelectorAll('a');
+	links?.forEach(link => {
+		link.addEventListener('click', () => {
+			hamburger?.classList.remove('active');
+			navLinks?.classList.remove('active');
+		});
+	});
+</script>
 
 <style>
 	.nav {
@@ -74,17 +101,84 @@
 		box-shadow: 0 0 6px var(--accent-glow);
 	}
 
+	/* Hamburger Menu Styles */
+	.hamburger {
+		display: none;
+		flex-direction: column;
+		cursor: pointer;
+		background: none;
+		border: none;
+		padding: 0.5rem;
+		z-index: 1001;
+	}
+
+	.hamburger span {
+		width: 25px;
+		height: 3px;
+		background: var(--text-primary);
+		margin: 3px 0;
+		transition: 0.3s;
+		border-radius: 2px;
+	}
+
+	.hamburger.active span:nth-child(1) {
+		transform: rotate(45deg) translate(9px, 9px);
+	}
+
+	.hamburger.active span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.active span:nth-child(3) {
+		transform: rotate(-45deg) translate(8px, -8px);
+	}
+
+	/* Mobile Navigation */
 	@media (max-width: 768px) {
+		.hamburger {
+			display: flex;
+		}
+
 		.nav-content {
-			padding: 1rem 1rem;
+			padding: 1rem;
 		}
 
 		.nav-links {
-			gap: 1rem;
+			position: fixed;
+			top: 70px;
+			right: -100%;
+			background: rgba(0, 0, 0, 0.98);
+			backdrop-filter: blur(12px);
+			width: 100%;
+			height: calc(100vh - 70px);
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			padding-top: 3rem;
+			gap: 2rem;
+			transition: right 0.3s ease;
+			border-top: 1px solid var(--border-subtle);
+		}
+
+		.nav-links.active {
+			right: 0;
 		}
 
 		.nav-links a {
-			font-size: 0.8rem;
+			font-size: 1.2rem;
+			padding: 1rem 2rem;
+			width: 80%;
+			text-align: center;
+			border-bottom: 1px solid var(--border-subtle);
+			border-radius: 8px;
+		}
+
+		.nav-links a:hover {
+			background: var(--bg-card);
+		}
+
+		.nav-links a:hover::after {
+			display: none;
 		}
 	}
 </style>

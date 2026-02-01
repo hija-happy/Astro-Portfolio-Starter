@@ -195,21 +195,32 @@
 	@media (max-width: 1024px) {
 		.hero-container {
 			grid-template-columns: 1fr;
-			gap: 3rem;
+			gap: 2rem;
 			text-align: center;
 		}
 
 		.hero-content {
 			order: 2;
 			padding-right: 0;
+			padding-left: 0;
+		}
+
+		.hero-content::before {
+			display: none;
 		}
 
 		.hero-image {
 			order: 1;
+			justify-content: center;
+			padding-left: 0;
 		}
 
 		.hero-name {
-			font-size: 3.5rem;
+			font-size: 2.8rem;
+		}
+
+		.hero-intro {
+			display: none;
 		}
 	}
 
@@ -217,35 +228,50 @@
 	@media (max-width: 768px) {
 		.hero-container {
 			padding: 1rem;
-			gap: 2rem;
+			gap: 1.5rem;
+		}
+
+		.hero-content {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.hero-content::before {
+			display: none;
+		}
+
+		.hero-image {
+			justify-content: center;
+			padding-left: 0;
 		}
 
 		.hero-name {
-			font-size: 2.8rem;
+			font-size: 2.2rem;
 		}
 
 		.hero-title {
-			font-size: 1.5rem;
+			font-size: 1.3rem;
 		}
 
 		.hero-intro {
-			font-size: 1.1rem;
+			display: none;
 		}
 
 		.hero-actions {
 			flex-direction: column;
 			align-items: center;
+			gap: 1rem;
 		}
 
 		.btn-primary,
 		.btn-secondary {
 			width: 100%;
-			max-width: 280px;
+			max-width: 250px;
 			text-align: center;
 		}
 
 		.image-container {
-			max-width: 350px;
+			max-width: 280px;
 		}
 	}
 

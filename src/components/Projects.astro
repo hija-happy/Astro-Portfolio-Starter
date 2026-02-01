@@ -3,10 +3,11 @@ const projects = [
 	{
 		title: "Mini CRM System",
 		description: "A complete Customer Relationship Management system with full-stack architecture. Features lead management, pipeline stages, communication logs, and user authentication.",
-		tech: ["Angular", "ASP.NET Web API", "Entity Framework Core", "C#", "TypeScript"],
+		tech: ["Angular", "ASP.NET Web API", "C#", "TypeScript", "Entity Framework Core"],
 		learnings: "Built my first enterprise-level application with complex database relationships and API design patterns.",
 		link: "#",
-		github: "https://github.com/hija-happy-sgx/CRM-Frontend"
+		notReady: true,
+		github: "https://github.com/hija-happy/CRM-Frontend"
 	},
 	{
 		title: "NFT MarketPlace",
@@ -14,6 +15,7 @@ const projects = [
 		tech: ["JavaScript", "Smart Contracts", "Web3", "React", "Solidity"],
 		learnings: "Gained hands-on experience with blockchain technology, smart contracts, and decentralized application architecture.",
 		link: "#",
+		notReady: true,
 		github: "https://github.com/hija-happy/NFT-MarketPlace"
 	},
 	{
@@ -21,8 +23,8 @@ const projects = [
 		description: "An intelligent image generation application using AI/ML technologies. Users can create unique images through text prompts and advanced AI algorithms.",
 		tech: ["Python", "AI/ML", "JavaScript", "API Integration", "Image Processing"],
 		learnings: "Explored artificial intelligence and machine learning concepts while building a practical creative tool.",
-		link: "#",
-		github: "#"
+		link: "https://landing-visual-ai.netlify.app/",
+		github: "https://github.com/hija-happy/ai-image-generator"
 	}
 ];
 ---
@@ -49,8 +51,12 @@ const projects = [
 					</p>
 					
 					<div class="project-links">
-						<a href={project.link} class="project-link">Live Demo</a>
-						<a href={project.github} class="project-link">GitHub</a>
+						{project.notReady ? (
+							<span class="project-link not-ready" title="Not ready please stay tuned">Live Demo</span>
+						) : (
+							<a href={project.link} class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+						)}
+						<a href={project.github} class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
 					</div>
 				</div>
 			))}
@@ -100,7 +106,7 @@ const projects = [
 
 	.projects-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+		grid-template-columns: repeat(3, 1fr);
 		gap: 2.5rem;
 	}
 
@@ -217,6 +223,37 @@ const projects = [
 		transform: translateY(-2px);
 	}
 
+	.project-link.not-ready {
+		cursor: not-allowed;
+		opacity: 0.6;
+		position: relative;
+	}
+
+	.project-link.not-ready:hover {
+		background: var(--bg-card);
+		color: var(--text-muted);
+		border-color: var(--border-subtle);
+		box-shadow: none;
+		transform: none;
+	}
+
+	.project-link.not-ready:hover::after {
+		content: "Not ready please stay tuned";
+		position: absolute;
+		top: -35px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: var(--bg-primary);
+		color: var(--text-primary);
+		padding: 0.5rem 1rem;
+		border-radius: 6px;
+		font-size: 0.8rem;
+		white-space: nowrap;
+		border: 1px solid var(--border-accent);
+		z-index: 10;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+	}
+
 	@media (max-width: 768px) {
 		.projects {
 			padding: 3rem 1rem;
@@ -234,8 +271,16 @@ const projects = [
 			padding: 2rem;
 		}
 
+		.project-learnings {
+			display: none;
+		}
+
 		.project-links {
 			flex-direction: column;
+		}
+
+		.project-links .project-link:first-child {
+			display: none;
 		}
 	}
 </style>
