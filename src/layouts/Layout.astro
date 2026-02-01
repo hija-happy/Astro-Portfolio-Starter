@@ -1,10 +1,15 @@
 ---
+import { inject } from '@vercel/analytics';
+
 export interface Props {
   title?: string;
   description?: string;
 }
 
 const { title = 'Junior Developer Portfolio', description = 'Frontend developer portfolio showcasing projects and skills' } = Astro.props;
+
+// Initialize Vercel Analytics
+inject();
 ---
 
 <!doctype html>
@@ -19,6 +24,10 @@ const { title = 'Junior Developer Portfolio', description = 'Frontend developer 
 	</head>
 	<body>
 		<slot />
+		<script>
+			import { inject } from '@vercel/analytics';
+			inject();
+		</script>
 	</body>
 </html>
 
