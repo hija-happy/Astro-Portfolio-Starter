@@ -1,31 +1,134 @@
-@import "tailwindcss";
-
-/* Enhanced global styles for professional portfolio */
+/* Enhanced global styles for cool blue 3D portrait theme */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* CSS Reset and base styles are handled in Layout.astro */
+/* Cool Blue Theme Variables - Matching 3D Portrait */
+:root {
+	/* Background Colors (from image) */
+	--bg-primary: #0a0d12;
+	--bg-secondary: #0f1419;
+	--bg-card: #141920;
+	--bg-card-hover: #1a222b;
+	
+	/* Text Colors */
+	--text-primary: #f8fafc;
+	--text-secondary: #cbd5e1;
+	--text-muted: #94a3b8;
+	
+	/* Cool Blue Accents (from image lighting) */
+	--accent-primary: #5ba3f5;
+	--accent-soft: #7bb3f0;
+	--accent-glow: #4a9eff33;
+	--accent-dim: #4a9eff1a;
+	
+	/* Border Colors */
+	--border-subtle: #1e2832;
+	--border-accent: #2a3441;
+	
+	/* Gradients for depth */
+	--gradient-hero: linear-gradient(135deg, var(--bg-primary) 0%, #0c1015 50%, var(--bg-secondary) 100%);
+	--gradient-section: linear-gradient(to bottom, transparent 0%, var(--accent-dim) 50%, transparent 100%);
+}
+
+/* Enhanced Typography */
+.heading-glow {
+	color: var(--text-primary);
+	text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.text-accent {
+	color: var(--accent-primary);
+}
+
+.text-accent-soft {
+	color: var(--accent-soft);
+}
+
+/* Cool Blue Button Styles */
+.btn-primary {
+	background: var(--accent-primary);
+	color: var(--bg-primary);
+	border: 2px solid var(--accent-primary);
+	transition: all 0.3s ease;
+	font-weight: 600;
+	padding: 0.75rem 2rem;
+	border-radius: 8px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.btn-primary:hover {
+	background: transparent;
+	color: var(--accent-primary);
+	box-shadow: 0 0 25px var(--accent-glow);
+	transform: translateY(-2px);
+}
+
+.btn-secondary {
+	background: transparent;
+	color: var(--accent-primary);
+	border: 2px solid var(--accent-primary);
+	transition: all 0.3s ease;
+	font-weight: 600;
+	padding: 0.75rem 2rem;
+	border-radius: 8px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.btn-secondary:hover {
+	background: var(--accent-primary);
+	color: var(--bg-primary);
+	box-shadow: 0 0 20px var(--accent-glow);
+	transform: translateY(-2px);
+}
+
+/* Card Styles */
+.card-cool {
+	background: var(--bg-card);
+	border: 1px solid var(--border-subtle);
+	border-radius: 12px;
+	transition: all 0.3s ease;
+}
+
+.card-cool:hover {
+	background: var(--bg-card-hover);
+	border-color: var(--accent-primary);
+	box-shadow: 0 8px 32px var(--accent-glow);
+	transform: translateY(-4px);
+}
 
 /* Smooth scrolling utility class */
 .smooth-scroll {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* Focus styles for accessibility */
 *:focus {
-  outline: 2px solid #e5e5e5;
-  outline-offset: 2px;
+	outline: 2px solid var(--accent-primary);
+	outline-offset: 2px;
 }
 
 /* Ensure images are responsive */
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
 }
 
 /* Print styles */
 @media print {
-  * {
-    background: white !important;
-    color: black !important;
-  }
+	* {
+		
+		color: black !important;
+	}
 }

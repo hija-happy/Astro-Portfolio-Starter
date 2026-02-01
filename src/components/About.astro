@@ -27,11 +27,22 @@
 <style>
 	.about {
 		padding: 5rem 2rem;
-		background: #0f0f0f;
+		background: var(--bg-secondary);
+		position: relative;
+	}
+
+	.about::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: var(--gradient-section);
 	}
 
 	.container {
-		max-width: 800px;
+		max-width: 900px;
 		margin: 0 auto;
 	}
 
@@ -40,7 +51,7 @@
 		font-weight: 700;
 		text-align: center;
 		margin-bottom: 3rem;
-		color: #e5e5e5;
+		color: var(--text-primary);
 	}
 
 	.about-content {
@@ -49,13 +60,19 @@
 	}
 
 	.about-text {
-		max-width: 600px;
+		max-width: 700px;
+		background: var(--bg-card);
+		border: 1px solid var(--border-subtle);
+		border-radius: 16px;
+		padding: 2.5rem;
+		border-left: 4px solid var(--accent-primary);
+		box-shadow: 0 4px 20px var(--accent-glow);
 	}
 
 	.about-paragraph {
 		font-size: 1.1rem;
-		line-height: 1.7;
-		color: #a3a3a3;
+		line-height: 1.8;
+		color: var(--text-secondary);
 		margin-bottom: 1.5rem;
 	}
 
@@ -70,6 +87,10 @@
 
 		.section-title {
 			font-size: 2rem;
+		}
+
+		.about-text {
+			padding: 2rem;
 		}
 
 		.about-paragraph {
